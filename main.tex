@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{color} %textcolor{red}{text goes here}
+%Cyan, Magenta, Yellow and blacK
+%\definecolor{mypink1}{rgb}{0.858, 0.188, 0.478}
+%\definecolor{mypink2}{cmyk}{0, 0.7808, 0.4429, 0.1412}
+%\definecolor{mygray}{gray}{0.6}
+
+\usepackage{makecell}
+%label a word
+\makeatletter
+\newcommand{\setword}[2]{%
+  \phantomsection
+  #1\def\@currentlabel{\unexpanded{#1}}\label{#2}%
+}
+\makeatother
+
+\usepackage{fancyhdr}
+ \pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE,RO]{Page \thepage}
+%\fancyhead[LO,RE]{A. Nix}
+ %\fancyfoot[LO,RE]{Student:Chrys}
+ \fancyhead[LE,RO]{Mobile Communication} 
+ 
+\usepackage{MnSymbol,wasysym} %\smiley{} \frownie{} \blacksmiley{} 
+\renewcommand\qedsymbol{\smiley{}}
+ 
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter] % reset theorem numbering for each chapter
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{example}[theorem]{Example} 
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+%\usepackage{imakeidx}
+%\makeindex %index{key}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+
+\usepackage{titlesec}
+\titleclass{\part}{top}
+\titleformat{\part}[display]
+  {\normalfont\huge\bfseries}{\centering\partname\ \thepart}{20pt}{\Huge\centering}
+\titlespacing*{\part}{0pt}{50pt}{40pt}
+\titleclass{\chapter}{straight}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter} {0pt}{50pt}{40pt}
+              
+\author{Professor. Andrew Nix}
+\title{Mobile Communications}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\part{Unit Information}
+\input{Unit_Information.tex}
+\part{Lectures}
+\input{./Lectures/1.2609}
+\input{./Lectures/2.2809}
+\input{./Lectures/3.0310}
+\input{./Lectures/4.0510}
+\input{./Lectures/5.1010}
+\input{./Lectures/6.1210}
+\input{./Lectures/7.1710}
+\input{./Lectures/8.1910}
+\input{./Lectures/9.2410}
+\input{./Lectures/10.2610}
+\input{./Lectures/11.3110}
+\input{./Lectures/12.0711}
+\input{./Lectures/13.0911}
+\input{./Lectures/14.2111}
+\input{./Lectures/15.2311}
+\input{./Lectures/16.2811}
+\input{./Lectures/17.3011}
+\input{./Lectures/18.0512}
+\input{./Lectures/19.0712}
+\input{./Lectures/20.1212}
+\input{./Lectures/21.1412}
+\part{Assignments}
+\part{Notes}
+\input{Notes}
+\part*{}
+\chapter*{Abbreviations}
+\input{Abbreviations}
+
+%\printindex
+\end{document}
